@@ -1,0 +1,63 @@
+{
+  "name": "integracion-sobre-ecommerce",
+  "version": "1.0.0",
+  "description": "Práctica de integración sobre ecommerce",
+  "main": "./src/index.js",
+  "type": "module",
+  "scripts": {
+    "lint": "standard && node ./src/index.js",
+    "test": "mocha ./test/index.spec.js",
+    "dev": "nodemon ./src/index.js",
+    "dev:test": "nodemon ./src/index.js --mode TESTING",
+    "start": "node ./src/index.js --mode PRODUCTION",
+    "start:test": "node ./src/index.js --mode TESTING",
+    "build:css": "npx tailwindcss -i ./src/public/css/tailwind.css -o ./src/public/css/app.css --minify --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aldair-gonzalez/Integracion-sobre-ecommerce.git"
+  },
+  "author": "Aldair González",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aldair-gonzalez/Integracion-sobre-ecommerce/issues"
+  },
+  "homepage": "https://github.com/aldair-gonzalez/Integracion-sobre-ecommerce#readme",
+  "dependencies": {
+    "bcrypt": "5.1.0",
+    "cookie-parser": "1.4.6",
+    "dotenv": "16.0.3",
+    "express": "4.18.2",
+    "express-compression": "1.0.2",
+    "express-handlebars": "7.0.7",
+    "jsonwebtoken": "9.0.0",
+    "moment-timezone": "0.5.43",
+    "mongoose": "7.2.1",
+    "mongoose-paginate-v2": "1.7.1",
+    "morgan": "1.10.0",
+    "nodemailer": "6.9.2",
+    "passport": "0.6.0",
+    "passport-github2": "0.1.12",
+    "passport-jwt": "4.0.1",
+    "passport-local": "1.0.0",
+    "swagger-jsdoc": "6.2.8",
+    "swagger-ui-express": "4.6.3",
+    "winston": "3.9.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "8.0.1",
+    "chai": "4.3.7",
+    "commander": "10.0.1",
+    "mocha": "10.2.0",
+    "nodemon": "2.0.22",
+    "standard": "17.0.0",
+    "supertest": "6.3.3",
+    "tailwindcss": "3.3.2"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
+  },
+  "engines": {
+    "node": ">= 18.15.0"
+  }
+}
